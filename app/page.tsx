@@ -15,22 +15,27 @@ export default function Home() {
           />
           <div className="absolute inset-0 hero-gradient" />
         </div>
-        
+
         <div className="container mx-auto px-4 z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Professional <span className="text-gradient">Live Streaming, 
-            <br />  Broadcasting & IT </span> Solutions
+            Professional <span className="text-gradient">Live Streaming,
+              <br />  Broadcasting & IT </span> Solutions
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl text-gray-300">
             Industry leaders in multi-camera live streaming, TV production, professional audio-visual services, and IT solutions since 2005
           </p>
           <div className="space-x-4">
-            <Button size="lg" className="bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))] text-black">
-              Our Services
-            </Button>
-            <Button size="lg" variant="outline">
-              Contact Us
-            </Button>
+
+            <Link href="/services">
+              <Button size="lg" className="bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))] text-black">
+                Our Services
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="outline">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -85,7 +90,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-12 text-center">
             <span className="text-gradient">Our Services</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               icon={<Play className="w-10 h-10 text-[hsl(var(--gold))]" />}
@@ -202,14 +207,14 @@ function ServiceCard({ icon, title, description }: { icon: React.ReactNode; titl
   );
 }
 
-function TestimonialCard({ 
-  quote, 
-  author, 
-  role, 
-  rating 
-}: { 
-  quote: string; 
-  author: string; 
+function TestimonialCard({
+  quote,
+  author,
+  role,
+  rating
+}: {
+  quote: string;
+  author: string;
   role: string;
   rating: number;
 }) {

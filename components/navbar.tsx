@@ -25,9 +25,11 @@ export function Navbar() {
             <NavLink href="/portfolio">Portfolio</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/contact">Contact</NavLink>
-            <Button className="bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))] text-black">
-              Get Started
-            </Button>
+            <Link href={"/contact"}>
+              <Button className="bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))] text-black">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -51,9 +53,11 @@ export function Navbar() {
               <NavLink href="/portfolio">Portfolio</NavLink>
               <NavLink href="/about">About</NavLink>
               <NavLink href="/contact">Contact</NavLink>
-              <Button className="bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))] text-black w-full">
-                Get Started
-              </Button>
+              <Link href={"/contact"}>
+                <Button className="bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))] text-black w-full">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         )}
